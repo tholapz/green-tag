@@ -41,7 +41,9 @@ const Upload = React.createClass({
         CTA = (<button onClick={this.handleGoToShare}><h1>Analyze It!</h1></button>);
     } else {
       $imagePreview = (<div>Take a picture</div>);
-      CTA = (<img style={{width:'80px'}} src={camera} alt="upload photo"/>);
+      CTA = (<button className="submitButton" type="submit" onClick={(e)=>this._handleSubmit(e)}>
+            <img style={{width:'80px'}} src={camera} alt="upload photo"/>
+          </button>);
     }
     return (
       <div className="previewComponent" style={{textAlign:'center'}}>
@@ -52,9 +54,7 @@ const Upload = React.createClass({
         <form onSubmit={(e)=>this._handleSubmit(e)}>
           <input style={{display:'none'}} ref="file" className="fileInput" type="file" onChange={(e)=>this._handleImageChange(e)} />
           <br/>
-          <button className="submitButton" type="submit" onClick={(e)=>this._handleSubmit(e)}>
-            {CTA}
-          </button>
+          {CTA}
         </form>
         
       </div>
