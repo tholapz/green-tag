@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Upload from './Upload';
+import Product from './Product';
 class App extends Component {
   render() {
     return (
@@ -15,4 +16,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Product;
+// export default Upload;
+// export default App;
