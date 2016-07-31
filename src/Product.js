@@ -23,9 +23,9 @@ const Product = React.createClass({
 					<li>100% recycled material</li>
 					<li>Machine Wash</li>
 				</ul>
-				<button>
+				<a>
 				<img className="img" src={add_to_cart} alt="buy"/>
-				</button>
+				</a>
 			</div>
 		);
 	}
